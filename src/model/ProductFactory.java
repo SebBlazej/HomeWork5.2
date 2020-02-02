@@ -8,8 +8,10 @@ public class ProductFactory {
 
     private Category getCategoryFromString(String category){
         category = category.toLowerCase().trim();
-        if(category.equals("drinks")) return Category.DRINKS;
-        else if(category.equals("toys")) return Category.TOYS;
-        else return Category.OTHER;
+        return switch(category) {
+            case "drinks" -> Category.DRINKS;
+            case "toys" -> Category.TOYS;
+            default -> Category.OTHER;
+        };
     }
 }
