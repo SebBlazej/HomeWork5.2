@@ -4,7 +4,7 @@ public class Product {
     private String name;
     private String description;
     private double netPrice;
-    public Category category;
+    private Category category;
 
     public Product(){
 
